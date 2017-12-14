@@ -139,7 +139,10 @@ public class SortGroupMemberAdapter extends BaseAdapter implements SectionIndexe
 	 * 根据ListView的当前位置获取分类的首字母的Char ascii值
 	 */
 	public int getSectionForPosition(int position) {
-		return list.get(position).getSortLetters().charAt(0);
+		if(list.size()>position) {
+			return list.get(position).getSortLetters().charAt(0);
+		}
+		return -1;
 	}
 
 	/**

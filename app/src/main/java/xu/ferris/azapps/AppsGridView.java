@@ -89,7 +89,7 @@ public class AppsGridView extends GridView {
                 viewHolder = (AppViewHolder) view.getTag();
             }
 
-
+            viewHolder.tvLetter.setText(groupMemberBeans.get(position).getName());
             return view;
         }
 
